@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run mta_sap-sapModule",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/mta_sap/mta-sap-approuter/node_modules/@sap/html5-repo-mock/index.js",
+      "args": [
+        "--standalone",
+        "/mtsapModule/index.html",
+        "--ui5",
+        "{\"version\":\".\"}"
+      ],
+      "cwd": "${workspaceFolder}/mta_sap/sapModule",
+      "env": {
+        "PORT": "6004",
+        "MOCK_LOOKUP_DIRS": "[\"webapp\"]",
+        "run.config": "{\"handlerId\":\"ui5_run_config_handler_id\",\"runnableId\":\"/home/user/projects/mta_sap/sapModule\"}"
+      },
+      "envFile": "${workspaceFolder}/mta_sap/sapModule/.env1",
+      "preLaunchTask": "Build mta_sap"
+    }
+  ]
+}
